@@ -1,0 +1,35 @@
+import type { Workout } from './types';
+
+export const fallbackWorkouts: Workout[] = [
+  ['Barbell Bench Press','CHEST,ARMS','Barbell, Bench',25,180,4.8,'Compound press for chest thickness, triceps, and pressing power.'],
+  ['Back Squat','LEGS,GLUTES','Barbell, Rack',30,240,4.9,'A foundational lower-body lift for strength and control.'],
+  ['Deadlift','BACK,LEGS','Barbell',28,260,4.9,'Posterior-chain pull that builds full-body strength.'],
+  ['Lat Pulldown','BACK,ARMS','Cable Machine',22,150,4.7,'Vertical pulling movement for lats and upper-back development.'],
+  ['Overhead Press','SHOULDERS,ARMS','Barbell',20,140,4.6,'Standing press that challenges shoulders and trunk stability.'],
+  ['Cable Row','BACK','Cable Machine',22,145,4.7,'Controlled horizontal pull for mid-back strength and posture.'],
+  ['Leg Press','LEGS,GLUTES','Leg Press',24,190,4.7,'Stable machine press for quads and glutes.'],
+  ['Dumbbell Curl','ARMS','Dumbbells',16,95,4.5,'Simple biceps isolation with an emphasis on control.'],
+  ['Triceps Pushdown','ARMS','Cable Machine',15,90,4.6,'Cable isolation to build triceps volume.'],
+  ['Romanian Deadlift','LEGS,GLUTES','Barbell',24,205,4.8,'Hip-hinge movement with an emphasis on hamstrings.'],
+  ['Russian Twist','CORE','Medicine Ball',14,100,4.6,'Rotational core work for control and endurance.'],
+  ['Incline Dumbbell Press','CHEST,ARMS','Dumbbells, Bench',23,165,4.7,'Upper-chest pressing with independent loading.'],
+].map((x, i) => ({
+  id: String(i + 1),
+  name: x[0] as string,
+  category: (x[1] as string).split(','),
+  equipment: x[2] as string,
+  duration: x[3] as number,
+  calories: x[4] as number,
+  rating: x[5] as number,
+  description: x[6] as string,
+  difficulty: 'Intermediate',
+  sets: '4',
+  reps: '8-12',
+  image: '/banner.png',
+  instructions: [
+    'Set your position and brace before the first rep.',
+    'Use a controlled range of motion throughout the set.',
+    'Keep your posture stable and avoid compensating with other muscles.',
+    'Finish the set safely and reset for the next round.',
+  ],
+}));
