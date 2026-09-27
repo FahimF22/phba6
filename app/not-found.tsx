@@ -1,0 +1,5 @@
+import Link from 'next/link';
+import { Logo, Footer } from './components/site';
+export default function NotFound() {
+  return <div className="flex min-h-screen flex-col bg-ink"><header className="border-b border-line px-4 py-5"><div className="mx-auto max-w-7xl"><Link href="/"><Logo /></Link></div></header><main className="flex flex-1 items-center justify-center px-4 py-20 text-center"><div><p className="text-[11px] font-black uppercase tracking-[.2em] text-lime">ERROR 404</p><h1 className="mt-3 font-display text-7xl uppercase">NOT FOUND</h1><p className="mx-auto mt-4 max-w-md text-sm leading-6 text-muted">That page doesn&apos;t exist. Head back to the workout library and keep the log moving.</p><Link href="/" className="mt-8 inline-flex rounded-xl bg-lime px-5 py-3 text-xs font-black uppercase tracking-[.12em] text-ink">Back to workouts →</Link></div></main><Footer /></div>;
+}

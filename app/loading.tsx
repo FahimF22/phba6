@@ -1,0 +1,2 @@
+import { LoadingState } from './components/loading-state';
+export default function Loading() { return <main className="min-h-screen bg-ink px-4 py-24"><div className="mx-auto max-w-xl"><LoadingState /></div></main>; }
